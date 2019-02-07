@@ -1,4 +1,4 @@
-service: gdl-assistant
+service: assistant-service
 
 provider:
   name: aws
@@ -6,21 +6,21 @@ provider:
   stage: prod
   region: eu-central-1
   endpointType: private
-  #role: arn:aws:iam::${env:GDL_ACCOUNT}:role/${env:SERVERLESS_IAM_ROLE}
+  role: arn:aws:iam::${env:GDL_ACCOUNT}:role/${env:SERVERLESS_IAM_ROLE}
   tags:
     VERSION: "0.1"
-  #deploymentBucket:
-  # name: ${env:GDL_SERVERLESS_DEPLOYMENT_BUCKET}
-  #resourcePolicy:
-  # - Effect: Allow
-  #   Principal: "*"
-  #   Action: execute-api:Invoke
-  #   Resource:
-  #     - execute-api:/*/*/*
-  #   Condition:
-  #     StringEquals:
-  #      aws:SourceVpce:
-  #        - '${env:VPC_ENDPOINT}'
+  deploymentBucket:
+  name: ${env:GDL_SERVERLESS_DEPLOYMENT_BUCKET}
+  resourcePolicy:
+  - Effect: Allow
+    Principal: "*"
+    Action: execute-api:Invoke
+    Resource:
+      - execute-api:/*/*/*
+    Condition:
+      StringEquals:
+       aws:SourceVpce:
+         - '${env:VPC_ENDPOINT}'
 
 package:
   include:
@@ -37,14 +37,14 @@ functions:
           method: POST
           path: /
 
-# custom:
-#   vpc:
-#     vpcName: ${env:VPC}
-#     subnetNames:
-#       - "${env:GDL_ENVIRONMENT}.private_a.gdl"
-#       - "${env:GDL_ENVIRONMENT}.private_b.gdl"
-#     securityGroupNames:
-#       - "serverless-security_group"
+custom:
+  vpc:
+    vpcName: ${env:VPC}
+    subnetNames:
+      - "${env:GDL_ENVIRONMENT}.private_a.gdl"
+      - "${env:GDL_ENVIRONMENT}.private_b.gdl"
+    securityGroupNames:
+      - "serverless-security_group"
 
 plugins:
   - serverless-vpc-discovery
