@@ -1,0 +1,73 @@
+{
+  "id": "aef0bab7-76d7-4c09-bd14-b9e243a0edc5",
+  "name": "quit_app",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "affectedContexts": [],
+      "parameters": [],
+      "messages": [
+        {
+          "type": 0,
+          "speech": []
+        }
+      ],
+      "defaultResponsePlatforms": {},
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "cortanaCommand": {
+    "navigateOrService": "NAVIGATE",
+    "target": ""
+  },
+  "webhookUsed": true,
+  "webhookForSlotFilling": false,
+  "lastUpdate": 1548793502,
+  "fallbackIntent": false,
+  "events": [],
+  "userSays": [
+    {
+      "id": "8a644823-21b4-4233-94d0-797e2481467c",
+      "data": [
+        {
+          "text": "quit"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0,
+      "updated": 1548793502,
+      "isAuto": false
+    },
+    {
+      "id": "962c9145-ea3f-445e-88c4-88ba781ac31f",
+      "data": [
+        {
+          "text": "bye bye"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0,
+      "updated": 1548793502,
+      "isAuto": false
+    },
+    {
+      "id": "6a109502-6904-4f1e-bfd7-0bf270b9f1ec",
+      "data": [
+        {
+          "text": "good bye"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0,
+      "updated": 1548793502,
+      "isAuto": false
+    }
+  ],
+  "followUpIntents": [],
+  "liveAgentHandoff": false,
+  "endInteraction": false,
+  "templates": []
+}

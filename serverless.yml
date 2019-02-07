@@ -1,0 +1,51 @@
+service: gdl-assistant
+
+provider:
+  name: aws
+  runtime: nodejs8.10
+  stage: prod
+  region: eu-central-1
+  endpointType: private
+  #role: arn:aws:iam::${env:GDL_ACCOUNT}:role/${env:SERVERLESS_IAM_ROLE}
+  tags:
+    VERSION: "0.1"
+  #deploymentBucket:
+  # name: ${env:GDL_SERVERLESS_DEPLOYMENT_BUCKET}
+  #resourcePolicy:
+  # - Effect: Allow
+  #   Principal: "*"
+  #   Action: execute-api:Invoke
+  #   Resource:
+  #     - execute-api:/*/*/*
+  #   Condition:
+  #     StringEquals:
+  #      aws:SourceVpce:
+  #        - '${env:VPC_ENDPOINT}'
+
+package:
+  include:
+    - functions/**
+  exclude:
+    - "*/**"
+
+functions:
+  assistant:
+    handler: functions/app.handler
+    description: "Google assistant API for reading books"
+    events:
+      - http:
+          method: POST
+          path: /
+
+# custom:
+#   vpc:
+#     vpcName: ${env:VPC}
+#     subnetNames:
+#       - "${env:GDL_ENVIRONMENT}.private_a.gdl"
+#       - "${env:GDL_ENVIRONMENT}.private_b.gdl"
+#     securityGroupNames:
+#       - "serverless-security_group"
+
+plugins:
+  - serverless-vpc-discovery
+  - serverless-offline #!OBS: serverless-offline needs to be last in the list

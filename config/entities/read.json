@@ -1,0 +1,15 @@
+{
+  "id": "48783131-bbb3-4f83-9827-258b8999e814",
+  "name": "read",
+  "isOverridable": true,
+  "entries": [
+    {
+      "value": "read",
+      "synonyms": [
+        "read"
+      ]
+    }
+  ],
+  "isEnum": false,
+  "automatedExpansion": true
+}

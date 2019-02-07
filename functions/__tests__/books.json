@@ -1,0 +1,149 @@
+[
+  {
+    "id": 397,
+    "title": "Cat and Dog and the butterfly",
+    "description": "Cat and Dog look through the window. They look through the window,  then Cat and Dog see a butterfly!",
+    "language": { "code": "en", "name": "English" },
+    "readingLevel": "3",
+    "categories": [{ "id": 1, "revision": 1, "name": "library_books" }],
+    "coverImage": {
+      "url": "https://res.cloudinary.com/djylvyru4/f_auto,q_auto/a474fb8a12ef9320798f463f2bdec114",
+      "alttext": "Cat and dog are chasing butterflies",
+      "imageId": "7544",
+      "variants": {
+        "0.81": {
+          "ratio": "0.81",
+          "x": 144,
+          "y": 57,
+          "width": 300,
+          "height": 371
+        }
+      }
+    },
+    "dateArrived": "2018-10-25",
+    "source": "african_storybook",
+    "highlightTitle": "Cat and <em>Dog</em> and the butterfly",
+    "highlightDescription": "Cat and <em>Dog</em> look through the window. They look through the window,  then Cat and <em>Dog</em> see a butterfly!",
+    "chapters": [
+      {
+        "id": 149,
+        "seqNo": 7,
+        "url": "https://api.test.digitallibrary.io/book-api/v1/books/en/11/chapters/149"
+      },
+      {
+        "id": 150,
+        "seqNo": 8,
+        "url": "https://api.test.digitallibrary.io/book-api/v1/books/en/11/chapters/150"
+      },
+      {
+        "id": 151,
+        "seqNo": 9,
+        "url": "https://api.test.digitallibrary.io/book-api/v1/books/en/11/chapters/151"
+      },
+      {
+        "id": 152,
+        "seqNo": 10,
+        "url": "https://api.test.digitallibrary.io/book-api/v1/books/en/11/chapters/152"
+      },
+      {
+        "id": 153,
+        "seqNo": 1,
+        "url": "https://api.test.digitallibrary.io/book-api/v1/books/en/11/chapters/153"
+      },
+      {
+        "id": 154,
+        "seqNo": 2,
+        "url": "https://api.test.digitallibrary.io/book-api/v1/books/en/11/chapters/154"
+      },
+      {
+        "id": 155,
+        "seqNo": 3,
+        "url": "https://api.test.digitallibrary.io/book-api/v1/books/en/11/chapters/155"
+      },
+      {
+        "id": 156,
+        "seqNo": 4,
+        "url": "https://api.test.digitallibrary.io/book-api/v1/books/en/11/chapters/156"
+      },
+      {
+        "id": 157,
+        "seqNo": 5,
+        "url": "https://api.test.digitallibrary.io/book-api/v1/books/en/11/chapters/157"
+      },
+      {
+        "id": 158,
+        "seqNo": 6,
+        "url": "https://api.test.digitallibrary.io/book-api/v1/books/en/11/chapters/158"
+      }
+    ]
+  },
+  {
+    "id": 77,
+    "title": "Fat King Thin Dog",
+    "description": "Run along with the Fat King after the Thin Dog!",
+    "language": { "code": "en", "name": "English" },
+    "readingLevel": "1",
+    "categories": [{ "id": 1, "revision": 1, "name": "library_books" }],
+    "coverImage": {
+      "url": "https://res.cloudinary.com/djylvyru4/f_auto,q_auto/55eb2ca91c4dfd41ad0745210cd0e3fb",
+      "alttext": "",
+      "imageId": "1142"
+    },
+    "dateArrived": "2017-11-10",
+    "source": "storyweaver",
+    "highlightTitle": "Fat King Thin <em>Dog</em>",
+    "highlightDescription": "Run along with the Fat King after the Thin <em>Dog</em>!",
+    "chapters": [
+      {
+        "id": 1070,
+        "seqNo": 1,
+        "url": "https://api.test.digitallibrary.io/book-api/v1/books/en/77/chapters/1070"
+      },
+      {
+        "id": 1071,
+        "seqNo": 2,
+        "url": "https://api.test.digitallibrary.io/book-api/v1/books/en/77/chapters/1071"
+      },
+      {
+        "id": 1072,
+        "seqNo": 3,
+        "url": "https://api.test.digitallibrary.io/book-api/v1/books/en/77/chapters/1072"
+      },
+      {
+        "id": 1073,
+        "seqNo": 4,
+        "url": "https://api.test.digitallibrary.io/book-api/v1/books/en/77/chapters/1073"
+      },
+      {
+        "id": 1074,
+        "seqNo": 5,
+        "url": "https://api.test.digitallibrary.io/book-api/v1/books/en/77/chapters/1074"
+      },
+      {
+        "id": 1075,
+        "seqNo": 6,
+        "url": "https://api.test.digitallibrary.io/book-api/v1/books/en/77/chapters/1075"
+      },
+      {
+        "id": 1076,
+        "seqNo": 7,
+        "url": "https://api.test.digitallibrary.io/book-api/v1/books/en/77/chapters/1076"
+      },
+      {
+        "id": 1077,
+        "seqNo": 8,
+        "url": "https://api.test.digitallibrary.io/book-api/v1/books/en/77/chapters/1077"
+      },
+      {
+        "id": 1078,
+        "seqNo": 9,
+        "url": "https://api.test.digitallibrary.io/book-api/v1/books/en/77/chapters/1078"
+      },
+      {
+        "id": 1079,
+        "seqNo": 10,
+        "url": "https://api.test.digitallibrary.io/book-api/v1/books/en/77/chapters/1079"
+      }
+    ]
+  }
+]

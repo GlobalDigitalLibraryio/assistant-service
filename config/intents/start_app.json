@@ -1,0 +1,65 @@
+{
+  "id": "d29ce482-efc3-4c0b-a931-7c18132a3cc5",
+  "name": "start_app",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "affectedContexts": [],
+      "parameters": [],
+      "messages": [
+        {
+          "type": 0,
+          "speech": "Welcome to GDL. \nI can help you with searching after books and read them. \n\nTo search for a book just name the topic of the book, like for example 'dog' or 'list books about dogs'.\n\nIf you want the assistant to read for you, you can trigger this by using the keyword 'read' like for example 'read a book about dogs' or 'read Cat and Dog and the butterfly'"
+        }
+      ],
+      "defaultResponsePlatforms": {},
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "cortanaCommand": {
+    "navigateOrService": "NAVIGATE",
+    "target": ""
+  },
+  "webhookUsed": true,
+  "webhookForSlotFilling": false,
+  "lastUpdate": 1548940406,
+  "fallbackIntent": false,
+  "events": [
+    {
+      "name": "GOOGLE_ASSISTANT_WELCOME"
+    }
+  ],
+  "userSays": [
+    {
+      "id": "3be89408-4d0f-4868-96d8-25ec89ab5442",
+      "data": [
+        {
+          "text": "homie casa"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0,
+      "updated": 1548272751,
+      "isAuto": false
+    },
+    {
+      "id": "a400418a-2256-4bbb-9e60-569df5e656de",
+      "data": [
+        {
+          "text": "Hey Google, can I talk to homie casa?"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0,
+      "updated": 1548272751,
+      "isAuto": false
+    }
+  ],
+  "followUpIntents": [],
+  "liveAgentHandoff": false,
+  "endInteraction": false,
+  "templates": []
+}
