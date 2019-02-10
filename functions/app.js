@@ -41,5 +41,8 @@ app.intent("Default Fallback Intent", conv => {
 });
 
 server.post("/", app);
+server.get("/health", (req, res) => {
+  res.status(200).json({ status: 'UP' });
+});
 
 module.exports.handler = serverless(server);

@@ -10,23 +10,25 @@ provider:
   tags:
     VERSION: "0.1"
   deploymentBucket:
-  name: ${env:GDL_SERVERLESS_DEPLOYMENT_BUCKET}
+    name: ${env:GDL_SERVERLESS_DEPLOYMENT_BUCKET}
   resourcePolicy:
-  - Effect: Allow
-    Principal: "*"
-    Action: execute-api:Invoke
-    Resource:
-      - execute-api:/*/*/*
-    Condition:
-      StringEquals:
-       aws:SourceVpce:
-         - '${env:VPC_ENDPOINT}'
-
+    - Effect: Allow
+      Principal: "*"
+      Action: execute-api:Invoke
+      Resource:
+        - execute-api:/*/*/*
+      Condition:
+        StringEquals:
+          aws:SourceVpce:
+            - "${env:VPC_ENDPOINT}"
 package:
-  include:
-    - functions/**
   exclude:
-    - "*/**"
+    - ./**
+    - '!node_modules/**'
+  include:
+    - package.json
+    - functions/**/*.js
+    - functions/*.js
 
 functions:
   assistant:
@@ -36,6 +38,9 @@ functions:
       - http:
           method: POST
           path: /
+      - http:
+          method: GET
+          path: /health
 
 custom:
   vpc:
