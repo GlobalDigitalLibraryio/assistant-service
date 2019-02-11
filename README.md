@@ -1,6 +1,6 @@
-# gdl-assistant
+# assistant-service
 
-GDL's google assistant
+Global Digital Library's Google assistant service
 
 ## Installation
 
@@ -11,7 +11,7 @@ GDL's google assistant
 
 #### Install Dependencies
 
-- `cd gdl-assistant/`
+- `cd assistant-service/`
 - `npm install`
 
 ### Run locally
@@ -24,7 +24,7 @@ To run the assistant locally on `localhost:3000`, use the command:
 Test are run by using the command:
 `npm run test`
 
-### Test with google actions and dialogflow
+### Test with Google actions and dialogflow
 
 To be able to test the API on an assistant like Google Home, Google home mini or an assistant on your phone you first need to create a project on [Google actions](https://developers.google.com/actions/).
 Then you can integrate with [Dialogflow](https://console.dialogflow.com/) where you set up the following:
