@@ -6,11 +6,11 @@ provider:
   stage: prod
   region: eu-central-1
   endpointType: private
-  role: arn:aws:iam::${env:GDL_ACCOUNT}:role/${env:SERVERLESS_IAM_ROLE}
+  role: arn:aws:iam::${env:GDL_ACCOUNT, 'DEV'}:role/${env:SERVERLESS_IAM_ROLE, 'DEV'}
   tags:
     VERSION: "0.1"
   deploymentBucket:
-    name: ${env:GDL_SERVERLESS_DEPLOYMENT_BUCKET}
+    name: ${env:GDL_SERVERLESS_DEPLOYMENT_BUCKET, 'DEV'}
   resourcePolicy:
     - Effect: Allow
       Principal: "*"
@@ -20,7 +20,7 @@ provider:
       Condition:
         StringEquals:
           aws:SourceVpce:
-            - "${env:VPC_ENDPOINT}"
+            - "${env:VPC_ENDPOINT, 'DEV'}"
 package:
   exclude:
     - ./**
@@ -44,10 +44,10 @@ functions:
 
 custom:
   vpc:
-    vpcName: ${env:VPC}
+    vpcName: ${env:VPC, 'DEV'}
     subnetNames:
-      - "${env:GDL_ENVIRONMENT}.private_a.gdl"
-      - "${env:GDL_ENVIRONMENT}.private_b.gdl"
+      - "${env:GDL_ENVIRONMENT, 'DEV'}.private_a.gdl"
+      - "${env:GDL_ENVIRONMENT, 'DEV'}.private_b.gdl"
     securityGroupNames:
       - "serverless-security_group"
 

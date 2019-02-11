@@ -2,8 +2,8 @@ const bookAPI = require("../gdl/book-api");
 const utils = require("../gdl/utils");
 
 const TEST_ENV_GDL_ENVIRONMENT = "test";
-let booksAboutCats;
-let bookAboutCat;
+let randomBooks;
+let firstRandomBook;
 
 beforeAll(async () => {
   /**
@@ -14,42 +14,35 @@ beforeAll(async () => {
   process.env.GDL_ENVIRONMENT = TEST_ENV_GDL_ENVIRONMENT;
   delete process.env.NODE_ENV;
 
-  booksAboutCats = await bookAPI.search("cats");
-  bookAboutCat = await bookAPI.getBook(booksAboutCats.data.results[0].id);
+  randomBooks = await bookAPI.search("");
+  firstRandomBook = await bookAPI.getBook(randomBooks.data.results[0].id);
 });
 
 describe("test search after books", () => {
   it("should return a 'totalCount' of books about cats greater than 1", async () => {
     expect.assertions(1);
-    expect(booksAboutCats.data.totalCount).toBeGreaterThanOrEqual(1);
+    expect(randomBooks.data.totalCount).toBeGreaterThanOrEqual(1);
   });
 
   it("should return books about cats in english", async () => {
     expect.assertions(1);
-    expect(booksAboutCats.data.language).toEqual({
+    expect(randomBooks.data.language).toEqual({
       code: "en",
       name: "English"
     });
-  });
-
-  it("should return books about cats (has cat in title)", async () => {
-    expect.assertions(1);
-    // We check the first book's title
-    const title = booksAboutCats.data.results[0].title.toLowerCase();
-    expect(title).toMatch(new RegExp("cat|cats"));
   });
 });
 
 describe("test getBook", () => {
   it("should get basic book content and url´s to all chapters in book", async () => {
     expect.assertions(2);
-    const firstBookAboutCats = booksAboutCats.data.results[0];
-    expect(bookAboutCat).toMatchObject({
-      id: firstBookAboutCats.id,
-      title: firstBookAboutCats.title
+    const randomBook = randomBooks.data.results[0];
+    expect(firstRandomBook).toMatchObject({
+      id: randomBook.id,
+      title: randomBook.title
     });
     expect(
-      bookAboutCat.chapters.filter(chapter => chapter.url !== undefined)
+      firstRandomBook.chapters.filter(chapter => chapter.url !== undefined)
     ).not.toContain(false);
   });
 
@@ -66,12 +59,12 @@ describe("test getBook", () => {
 describe("test getChapter", () => {
   it("should get details from a chapter url", async () => {
     expect.assertions(1);
-    const firstChapterUrl = utils.findFirstReadablePageInBook(bookAboutCat).url;
+    const firstChapterUrl = utils.findFirstReadablePageInBook(firstRandomBook).url;
     const firstChapter = await bookAPI.getChapter(
       firstChapterUrl,
-      bookAboutCat
+      firstRandomBook
     );
-    await expect(firstChapter).toEqual(bookAboutCat);
+    await expect(firstChapter).toEqual(firstRandomBook);
   });
 
   it("should return error if the url is invalid", async () => {
@@ -79,7 +72,7 @@ describe("test getChapter", () => {
 
     const firstChapter = bookAPI.getChapter(
       "https://api.test.digitallibrary.io/book-api/v1/books/en/495/chapters/1",
-      bookAboutCat
+      firstRandomBook
     );
 
     await expect(firstChapter).rejects.toMatchObject({

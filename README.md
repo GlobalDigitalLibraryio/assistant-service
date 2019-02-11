@@ -22,7 +22,7 @@ To run the assistant locally on `localhost:3000`, use the command:
 #### Run tests
 
 Test are run by using the command:
-`npm run tests`
+`npm run test`
 
 ### Test with google actions and dialogflow
 

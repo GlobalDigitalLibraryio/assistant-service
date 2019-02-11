@@ -11,7 +11,7 @@
       "messages": [
         {
           "type": 0,
-          "speech": "Welcome to GDL. \nI can help you with searching after books and read them. \n\nTo search for a book just name the topic of the book, like for example 'dog' or 'list books about dogs'.\n\nIf you want the assistant to read for you, you can trigger this by using the keyword 'read' like for example 'read a book about dogs' or 'read Cat and Dog and the butterfly'"
+          "speech": "Welcome to Global Digital Library. \nI can help you with searching after books and read them. \n\nTo search for a book just name the topic of the book, like for example 'dog' or 'list books about dogs'.\n\nIf you want the assistant to read for you, you can trigger this by using the keyword 'read' like for example 'read a book about dogs' or 'read Cat and Dog and the butterfly'"
         }
       ],
       "defaultResponsePlatforms": {},
