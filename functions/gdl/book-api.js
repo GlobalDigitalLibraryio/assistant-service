@@ -32,9 +32,6 @@ exports.search = function(query) {
 // Get book and first chapter
 exports.getBook = function(bookId) {
   return axios(`${bookApiUrl()}/books/en/${bookId}`)
-    .catch(error => {
-      throw { status: error.response.status, text: error.response.statusText };
-    })
     .then(response => {
       if (!utils.isEmpty(response.data)) {
         return this.getChapter(
@@ -43,15 +40,15 @@ exports.getBook = function(bookId) {
         );
       }
       return response.data;
+    })
+    .catch(error => {
+      throw { status: error.response.status, text: error.response.statusText };
     });
 };
 
 // Get a specific chapter in book
 exports.getChapter = function(url, book) {
   return axios(url)
-    .catch(error => {
-      throw { status: error.response.status, text: error.response.statusText };
-    })
     .then(chapter => {
       // To skip License pages if they are marked correct
       if (chapter.chapterType === "License") return null;
@@ -70,5 +67,8 @@ exports.getChapter = function(url, book) {
         chapterType: chapter.data.chapterType,
         chapters: book.chapters.sort((a, b) => a.seqNo - b.seqNo)
       };
+    })
+    .catch(error => {
+      throw { status: error.response.status, text: error.response.statusText };
     });
 };

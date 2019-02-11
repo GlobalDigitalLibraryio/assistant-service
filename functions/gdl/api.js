@@ -18,6 +18,10 @@ exports.listBooks = async conv => {
     // If the user clicks or says he/she wish the assistant to read book with title X
     if (query.queryText === "actions_intent_OPTION") {
       const input = conv.arguments.parsed.input;
+      if (!input) {
+        conv.ask('Sorry, we did not get that. Could you please try again?');
+        return;
+      }
       const book = await bookAPI.getBook(input.OPTION);
 
       conv.user.storage = utils.storeBook(book);
