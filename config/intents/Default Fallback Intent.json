@@ -1,5 +1,5 @@
 {
-  "id": "4707c08a-2b5f-4298-8363-aa3da8ef241d",
+  "id": "565a2cee-6400-44bb-a4b7-8202fe867dbc",
   "name": "Default Fallback Intent",
   "auto": true,
   "contexts": [],
@@ -35,13 +35,9 @@
   "priority": 500000,
   "webhookUsed": true,
   "webhookForSlotFilling": false,
-  "lastUpdate": 1548313803,
+  "lastUpdate": 1549970789,
   "fallbackIntent": true,
-  "events": [
-    {
-      "name": "actions_intent_GET_JOKE"
-    }
-  ],
+  "events": [],
   "userSays": [],
   "followUpIntents": [],
   "liveAgentHandoff": false,

@@ -1,5 +1,5 @@
 {
-  "id": "d29ce482-efc3-4c0b-a931-7c18132a3cc5",
+  "id": "49269ccc-3cb7-4e4f-a159-772966c131ab",
   "name": "start_app",
   "auto": true,
   "contexts": [],
@@ -11,7 +11,7 @@
       "messages": [
         {
           "type": 0,
-          "speech": "Welcome to Global Digital Library. \nI can help you with searching after books and read them. \n\nTo search for a book just name the topic of the book, like for example 'dog' or 'list books about dogs'.\n\nIf you want the assistant to read for you, you can trigger this by using the keyword 'read' like for example 'read a book about dogs' or 'read Cat and Dog and the butterfly'"
+          "speech": "Welcome to the Global Digital Library. \nI can help you with searching after books and read them. \n\nTo search for a book just name the topic of the book, like for example 'dog' or 'list books about dogs'.\n\nIf you want the assistant to read for you, you can trigger this by using the keyword 'read' like for example 'read a book about dogs' or 'read Cat and Dog and the butterfly'"
         }
       ],
       "defaultResponsePlatforms": {},
@@ -25,7 +25,7 @@
   },
   "webhookUsed": true,
   "webhookForSlotFilling": false,
-  "lastUpdate": 1548940406,
+  "lastUpdate": 1549968865,
   "fallbackIntent": false,
   "events": [
     {
@@ -34,27 +34,27 @@
   ],
   "userSays": [
     {
-      "id": "3be89408-4d0f-4868-96d8-25ec89ab5442",
+      "id": "b697ae1e-c06d-4ee5-b4b2-021ed63c199b",
       "data": [
         {
-          "text": "homie casa"
+          "text": "Hey Google, can I talk to GDL Library?"
         }
       ],
       "isTemplate": false,
       "count": 0,
-      "updated": 1548272751,
+      "updated": 1549968865,
       "isAuto": false
     },
     {
-      "id": "a400418a-2256-4bbb-9e60-569df5e656de",
+      "id": "c61ee8f4-3c94-4e0a-a8af-82f82f809eae",
       "data": [
         {
-          "text": "Hey Google, can I talk to homie casa?"
+          "text": "GDL Library"
         }
       ],
       "isTemplate": false,
       "count": 0,
-      "updated": 1548272751,
+      "updated": 1549968865,
       "isAuto": false
     }
   ],
