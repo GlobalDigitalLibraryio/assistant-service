@@ -1,0 +1,249 @@
+{
+  "id": "c8e25fad-bb04-4609-867e-97c0cba4ed48",
+  "name": "topic",
+  "isOverridable": true,
+  "entries": [
+    {
+      "value": "dog",
+      "synonyms": [
+        "dog",
+        "dogs",
+        "puppy"
+      ]
+    },
+    {
+      "value": "cat",
+      "synonyms": [
+        "cat",
+        "cats",
+        "kittens"
+      ]
+    },
+    {
+      "value": "friend",
+      "synonyms": [
+        "friend",
+        "friends"
+      ]
+    },
+    {
+      "value": "man",
+      "synonyms": [
+        "man",
+        "men"
+      ]
+    },
+    {
+      "value": "boy",
+      "synonyms": [
+        "boy",
+        "boys"
+      ]
+    },
+    {
+      "value": "girl",
+      "synonyms": [
+        "girl",
+        "girls"
+      ]
+    },
+    {
+      "value": "women",
+      "synonyms": [
+        "women",
+        "woman"
+      ]
+    },
+    {
+      "value": "bird",
+      "synonyms": [
+        "bird",
+        "birds"
+      ]
+    },
+    {
+      "value": "king",
+      "synonyms": [
+        "king",
+        "kings"
+      ]
+    },
+    {
+      "value": "queen",
+      "synonyms": [
+        "queen",
+        "queens"
+      ]
+    },
+    {
+      "value": "spider",
+      "synonyms": [
+        "spider",
+        "spiders"
+      ]
+    },
+    {
+      "value": "clothes",
+      "synonyms": [
+        "clothes"
+      ]
+    },
+    {
+      "value": "sun",
+      "synonyms": [
+        "sun"
+      ]
+    },
+    {
+      "value": "moon",
+      "synonyms": [
+        "moon"
+      ]
+    },
+    {
+      "value": "morning",
+      "synonyms": [
+        "morning"
+      ]
+    },
+    {
+      "value": "night",
+      "synonyms": [
+        "night"
+      ]
+    },
+    {
+      "value": "ant",
+      "synonyms": [
+        "ant"
+      ]
+    },
+    {
+      "value": "elephant",
+      "synonyms": [
+        "elephant"
+      ]
+    },
+    {
+      "value": "banana",
+      "synonyms": [
+        "banana"
+      ]
+    },
+    {
+      "value": "birthday",
+      "synonyms": [
+        "birthday"
+      ]
+    },
+    {
+      "value": "child",
+      "synonyms": [
+        "child",
+        "children"
+      ]
+    },
+    {
+      "value": "family",
+      "synonyms": [
+        "family"
+      ]
+    },
+    {
+      "value": "small",
+      "synonyms": [
+        "small",
+        "little"
+      ]
+    },
+    {
+      "value": "big",
+      "synonyms": [
+        "big",
+        "huge"
+      ]
+    },
+    {
+      "value": "hair",
+      "synonyms": [
+        "hair"
+      ]
+    },
+    {
+      "value": "hippo",
+      "synonyms": [
+        "hippo",
+        "hippopotamus"
+      ]
+    },
+    {
+      "value": "goat",
+      "synonyms": [
+        "goat"
+      ]
+    },
+    {
+      "value": "cow",
+      "synonyms": [
+        "cow"
+      ]
+    },
+    {
+      "value": "horse",
+      "synonyms": [
+        "horse"
+      ]
+    },
+    {
+      "value": "Colour",
+      "synonyms": [
+        "Colour",
+        "color"
+      ]
+    },
+    {
+      "value": "pig",
+      "synonyms": [
+        "pig"
+      ]
+    },
+    {
+      "value": "chicken",
+      "synonyms": [
+        "chicken"
+      ]
+    },
+    {
+      "value": "mouse",
+      "synonyms": [
+        "mouse"
+      ]
+    },
+    {
+      "value": "tall",
+      "synonyms": [
+        "tall"
+      ]
+    },
+    {
+      "value": "teacher",
+      "synonyms": [
+        "teacher"
+      ]
+    },
+    {
+      "value": "teeth",
+      "synonyms": [
+        "teeth"
+      ]
+    },
+    {
+      "value": "abilities",
+      "synonyms": [
+        "abilities"
+      ]
+    }
+  ],
+  "isEnum": false,
+  "automatedExpansion": true
+}

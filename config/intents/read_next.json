@@ -1,0 +1,90 @@
+{
+  "id": "b9ca69e4-113a-4189-a2c8-622e3eeeeb9d",
+  "name": "read_next",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "affectedContexts": [],
+      "parameters": [],
+      "messages": [
+        {
+          "type": 0,
+          "speech": []
+        }
+      ],
+      "defaultResponsePlatforms": {},
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "cortanaCommand": {
+    "navigateOrService": "NAVIGATE",
+    "target": ""
+  },
+  "webhookUsed": true,
+  "webhookForSlotFilling": false,
+  "lastUpdate": 1548942873,
+  "fallbackIntent": false,
+  "events": [],
+  "userSays": [
+    {
+      "id": "ea921009-d54d-4a11-8715-f7879adf671b",
+      "data": [
+        {
+          "text": "open next"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0,
+      "updated": 1548759869,
+      "isAuto": false
+    },
+    {
+      "id": "417a187a-9509-44c9-ab80-ffdfae43ba6f",
+      "data": [
+        {
+          "text": "next chapter"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0,
+      "updated": 1548759869,
+      "isAuto": false
+    },
+    {
+      "id": "433b7147-ee56-406d-a4ac-2ceff517808b",
+      "data": [
+        {
+          "text": "read",
+          "meta": "@sys.ignore",
+          "userDefined": false
+        },
+        {
+          "text": " next chapter"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0,
+      "updated": 1548942873,
+      "isAuto": false
+    },
+    {
+      "id": "380d595d-4acd-4625-9642-812705f4100f",
+      "data": [
+        {
+          "text": "next"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0,
+      "updated": 1548759869,
+      "isAuto": false
+    }
+  ],
+  "followUpIntents": [],
+  "liveAgentHandoff": false,
+  "endInteraction": false,
+  "templates": []
+}

@@ -1,0 +1,37 @@
+{
+  "name": "assistant-service",
+  "version": "1.0.0",
+  "description": "Google assistant API for reading books",
+  "repository": {
+    "url": "https://github.com/GlobalDigitalLibraryio/assistant-service"
+  },
+  "jest": {
+    "collectCoverage": true,
+    "collectCoverageFrom": [
+      "functions/**/*.js",
+      "!functions/app.js",
+      "!functions/gdl/api.js",
+      "!**/node_modules/**"
+    ]
+  },
+  "main": "app.js",
+  "dependencies": {
+    "actions-on-google": "^2.5.0",
+    "axios": "^0.18.0",
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "serverless": "^1.37.0",
+    "serverless-http": "^1.9.0",
+    "serverless-vpc-discovery": "^1.0.13"
+  },
+  "devDependencies": {
+    "jest": "^24.1.0",
+    "serverless-offline": "^4.2.2"
+  },
+  "scripts": {
+    "dev": "serverless offline start",
+    "test": "jest"
+  },
+  "author": "linvik@knowit.no",
+  "license": "GPL v3"
+}

@@ -1,0 +1,288 @@
+{
+  "id": "6d138f70-25ef-4b1b-8f15-a0dbfa4687c5",
+  "name": "read_book",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "affectedContexts": [],
+      "parameters": [
+        {
+          "id": "583da4d6-0bb2-4488-a44d-74df73a50163",
+          "required": false,
+          "dataType": "@topic",
+          "name": "topic",
+          "value": "$topic",
+          "isList": false
+        },
+        {
+          "id": "0dced4d0-5aef-4b08-b382-d3af04638b9e",
+          "required": false,
+          "dataType": "@read",
+          "name": "read",
+          "value": "$read",
+          "isList": false
+        }
+      ],
+      "messages": [
+        {
+          "type": 0,
+          "speech": []
+        }
+      ],
+      "defaultResponsePlatforms": {},
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "cortanaCommand": {
+    "navigateOrService": "NAVIGATE",
+    "target": ""
+  },
+  "webhookUsed": true,
+  "webhookForSlotFilling": false,
+  "lastUpdate": 1548943698,
+  "fallbackIntent": false,
+  "events": [],
+  "userSays": [
+    {
+      "id": "7e09e854-b7da-445c-ac7b-764912768e51",
+      "data": [
+        {
+          "text": "read",
+          "alias": "read",
+          "meta": "@read",
+          "userDefined": false
+        }
+      ],
+      "isTemplate": false,
+      "count": 0,
+      "updated": 1548943698,
+      "isAuto": false
+    },
+    {
+      "id": "5becd88a-3ced-4fd3-bc38-d1af0cf40e45",
+      "data": [
+        {
+          "text": "read",
+          "alias": "read",
+          "meta": "@read",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "Namu's Bicycle",
+          "alias": "topic",
+          "meta": "@topic",
+          "userDefined": true
+        }
+      ],
+      "isTemplate": false,
+      "count": 0,
+      "updated": 1548943698,
+      "isAuto": false
+    },
+    {
+      "id": "d5d6212c-0437-4e05-8af1-e730cc8246b1",
+      "data": [
+        {
+          "text": "read",
+          "alias": "read",
+          "meta": "@read",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "Rooster and Hare",
+          "alias": "topic",
+          "meta": "@topic",
+          "userDefined": true
+        }
+      ],
+      "isTemplate": false,
+      "count": 0,
+      "updated": 1548943698,
+      "isAuto": false
+    },
+    {
+      "id": "b9718e67-294b-4265-b22b-99de06bfbe08",
+      "data": [
+        {
+          "text": "read",
+          "alias": "read",
+          "meta": "@read",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "Pendo Our Cow",
+          "alias": "topic",
+          "meta": "@topic",
+          "userDefined": false
+        }
+      ],
+      "isTemplate": false,
+      "count": 0,
+      "updated": 1548943698,
+      "isAuto": false
+    },
+    {
+      "id": "81fa53f4-b4be-4465-88bc-18108ef09e2f",
+      "data": [
+        {
+          "text": "read",
+          "alias": "read",
+          "meta": "@read",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "I Like To Read",
+          "alias": "topic",
+          "meta": "@topic",
+          "userDefined": true
+        }
+      ],
+      "isTemplate": false,
+      "count": 0,
+      "updated": 1548943698,
+      "isAuto": false
+    },
+    {
+      "id": "7da939fe-8ec6-4a30-b016-43ea92bf5cbc",
+      "data": [
+        {
+          "text": "read",
+          "alias": "read",
+          "meta": "@read",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "tall man",
+          "alias": "topic",
+          "meta": "@topic",
+          "userDefined": false
+        }
+      ],
+      "isTemplate": false,
+      "count": 0,
+      "updated": 1548943698,
+      "isAuto": false
+    },
+    {
+      "id": "466f1afc-b088-4c44-9057-976d1e17438b",
+      "data": [
+        {
+          "text": "read",
+          "alias": "read",
+          "meta": "@read",
+          "userDefined": true
+        },
+        {
+          "text": " a book about a "
+        },
+        {
+          "text": "man",
+          "alias": "topic",
+          "meta": "@topic",
+          "userDefined": false
+        },
+        {
+          "text": " aloud"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0,
+      "updated": 1548943698,
+      "isAuto": false
+    },
+    {
+      "id": "f45c053f-39be-4c81-96dd-33c015877448",
+      "data": [
+        {
+          "text": "read",
+          "alias": "read",
+          "meta": "@read",
+          "userDefined": true
+        },
+        {
+          "text": " a book about "
+        },
+        {
+          "text": "friends",
+          "alias": "topic",
+          "meta": "@topic",
+          "userDefined": false
+        }
+      ],
+      "isTemplate": false,
+      "count": 0,
+      "updated": 1548943698,
+      "isAuto": false
+    },
+    {
+      "id": "5c3495a5-54df-48da-b727-3f88a108d6da",
+      "data": [
+        {
+          "text": "read",
+          "alias": "read",
+          "meta": "@read",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "cat",
+          "alias": "topic",
+          "meta": "@topic",
+          "userDefined": false
+        }
+      ],
+      "isTemplate": false,
+      "count": 0,
+      "updated": 1548943698,
+      "isAuto": false
+    },
+    {
+      "id": "45076972-19fe-4c62-abde-2225bc14bb49",
+      "data": [
+        {
+          "text": "read",
+          "alias": "read",
+          "meta": "@read",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "dog",
+          "alias": "topic",
+          "meta": "@topic",
+          "userDefined": false
+        }
+      ],
+      "isTemplate": false,
+      "count": 0,
+      "updated": 1548943698,
+      "isAuto": false
+    }
+  ],
+  "followUpIntents": [],
+  "liveAgentHandoff": false,
+  "endInteraction": false,
+  "templates": []
+}

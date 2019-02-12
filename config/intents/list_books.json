@@ -1,0 +1,310 @@
+{
+  "id": "4f9a3b72-28b5-44c2-a742-2369e16a2e2c",
+  "name": "list_books",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "input.unknown",
+      "affectedContexts": [],
+      "parameters": [
+        {
+          "id": "bc4e1a8f-0881-40a5-967d-4a96725af02e",
+          "required": false,
+          "dataType": "@topic",
+          "name": "topic",
+          "value": "$topic",
+          "isList": false
+        }
+      ],
+      "messages": [
+        {
+          "type": 0,
+          "speech": "Results with topic $topic"
+        }
+      ],
+      "defaultResponsePlatforms": {
+        "google": true
+      },
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "cortanaCommand": {
+    "navigateOrService": "NAVIGATE",
+    "target": ""
+  },
+  "webhookUsed": true,
+  "webhookForSlotFilling": false,
+  "lastUpdate": 1548943730,
+  "fallbackIntent": false,
+  "events": [
+    {
+      "name": "actions_intent_OPTION"
+    }
+  ],
+  "userSays": [
+    {
+      "id": "87c41102-a629-44bc-98e7-61f32d154117",
+      "data": [
+        {
+          "text": "list "
+        },
+        {
+          "text": "hippo",
+          "alias": "topic",
+          "meta": "@topic",
+          "userDefined": false
+        }
+      ],
+      "isTemplate": false,
+      "count": 0,
+      "updated": 1548943730,
+      "isAuto": false
+    },
+    {
+      "id": "fe26aa85-8000-4e53-b133-d4ff9b1a7f44",
+      "data": [
+        {
+          "text": "list"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0,
+      "updated": 1548943730,
+      "isAuto": false
+    },
+    {
+      "id": "674f3c48-4c80-452e-ac97-86f64db12b54",
+      "data": [
+        {
+          "text": "list",
+          "meta": "@sys.ignore",
+          "userDefined": true
+        },
+        {
+          "text": " books about "
+        },
+        {
+          "text": "cows",
+          "alias": "topic",
+          "meta": "@topic",
+          "userDefined": false
+        }
+      ],
+      "isTemplate": false,
+      "count": 0,
+      "updated": 1548943486,
+      "isAuto": false
+    },
+    {
+      "id": "ff24d42e-f4d7-4cd0-bb7f-7dd361b2bdfb",
+      "data": [
+        {
+          "text": "give a list of books with the topic "
+        },
+        {
+          "text": "cat",
+          "alias": "topic",
+          "meta": "@topic",
+          "userDefined": false
+        }
+      ],
+      "isTemplate": false,
+      "count": 0,
+      "updated": 1548795282,
+      "isAuto": false
+    },
+    {
+      "id": "093e92ca-88e1-4023-a5c0-a4d6c68627bd",
+      "data": [
+        {
+          "text": "show books about "
+        },
+        {
+          "text": "dog",
+          "alias": "topic",
+          "meta": "@topic",
+          "userDefined": false
+        }
+      ],
+      "isTemplate": false,
+      "count": 0,
+      "updated": 1548795282,
+      "isAuto": false
+    },
+    {
+      "id": "c2289dfd-6f8d-4902-b1fd-1b59982106e6",
+      "data": [
+        {
+          "text": "show books about "
+        },
+        {
+          "text": "friends",
+          "alias": "topic",
+          "meta": "@topic",
+          "userDefined": false
+        }
+      ],
+      "isTemplate": false,
+      "count": 0,
+      "updated": 1548795282,
+      "isAuto": false
+    },
+    {
+      "id": "54c83b72-39ed-418b-bcda-9265e9917d54",
+      "data": [
+        {
+          "text": "list "
+        },
+        {
+          "text": "puppets",
+          "alias": "topic",
+          "meta": "@topic",
+          "userDefined": true
+        }
+      ],
+      "isTemplate": false,
+      "count": 0,
+      "updated": 1548663848,
+      "isAuto": false
+    },
+    {
+      "id": "8f8b93d8-487c-4a68-bad4-b694541e6a78",
+      "data": [
+        {
+          "text": "list",
+          "meta": "@sys.ignore",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "friends",
+          "alias": "topic",
+          "meta": "@topic",
+          "userDefined": false
+        }
+      ],
+      "isTemplate": false,
+      "count": 0,
+      "updated": 1548943486,
+      "isAuto": false
+    },
+    {
+      "id": "53a4bc1a-973a-4cdd-a0d1-ebe9b28acf0d",
+      "data": [
+        {
+          "text": "list",
+          "meta": "@sys.ignore",
+          "userDefined": true
+        },
+        {
+          "text": " all books about "
+        },
+        {
+          "text": "friends",
+          "alias": "topic",
+          "meta": "@topic",
+          "userDefined": false
+        }
+      ],
+      "isTemplate": false,
+      "count": 0,
+      "updated": 1548943486,
+      "isAuto": false
+    },
+    {
+      "id": "2986d92f-bb85-49b6-83b2-d7e2f84b8957",
+      "data": [
+        {
+          "text": "friend",
+          "alias": "topic",
+          "meta": "@topic",
+          "userDefined": false
+        }
+      ],
+      "isTemplate": false,
+      "count": 0,
+      "updated": 1548663848,
+      "isAuto": false
+    },
+    {
+      "id": "b6d393d0-a177-48fd-a14d-0a57c674fcc0",
+      "data": [
+        {
+          "text": "dog",
+          "alias": "topic",
+          "meta": "@topic",
+          "userDefined": false
+        }
+      ],
+      "isTemplate": false,
+      "count": 0,
+      "updated": 1548663848,
+      "isAuto": false
+    },
+    {
+      "id": "42a760d3-142d-43e1-ae36-65d1325516e6",
+      "data": [
+        {
+          "text": "list",
+          "meta": "@sys.ignore",
+          "userDefined": true
+        },
+        {
+          "text": " all books about "
+        },
+        {
+          "text": "dogs",
+          "alias": "topic",
+          "meta": "@topic",
+          "userDefined": false
+        }
+      ],
+      "isTemplate": false,
+      "count": 0,
+      "updated": 1548943486,
+      "isAuto": false
+    },
+    {
+      "id": "7ad8d41e-e21c-4a1a-b015-e4c462a3be92",
+      "data": [
+        {
+          "text": "list all books about "
+        },
+        {
+          "text": "cats",
+          "alias": "topic",
+          "meta": "@topic",
+          "userDefined": false
+        }
+      ],
+      "isTemplate": false,
+      "count": 1,
+      "updated": 1548663848,
+      "isAuto": false
+    },
+    {
+      "id": "4f9333be-e2f6-43be-9220-a1694efb7130",
+      "data": [
+        {
+          "text": "cat",
+          "alias": "topic",
+          "meta": "@topic",
+          "userDefined": false
+        }
+      ],
+      "isTemplate": false,
+      "count": 0,
+      "updated": 1548663848,
+      "isAuto": false
+    }
+  ],
+  "followUpIntents": [],
+  "liveAgentHandoff": false,
+  "endInteraction": false,
+  "templates": []
+}

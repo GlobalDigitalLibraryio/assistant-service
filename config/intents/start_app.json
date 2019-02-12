@@ -1,0 +1,65 @@
+{
+  "id": "49269ccc-3cb7-4e4f-a159-772966c131ab",
+  "name": "start_app",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "affectedContexts": [],
+      "parameters": [],
+      "messages": [
+        {
+          "type": 0,
+          "speech": "Welcome to the Global Digital Library. \nI can help you with searching after books and read them. \n\nTo search for a book just name the topic of the book, like for example 'dog' or 'list books about dogs'.\n\nIf you want the assistant to read for you, you can trigger this by using the keyword 'read' like for example 'read a book about dogs' or 'read Cat and Dog and the butterfly'"
+        }
+      ],
+      "defaultResponsePlatforms": {},
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "cortanaCommand": {
+    "navigateOrService": "NAVIGATE",
+    "target": ""
+  },
+  "webhookUsed": true,
+  "webhookForSlotFilling": false,
+  "lastUpdate": 1549968865,
+  "fallbackIntent": false,
+  "events": [
+    {
+      "name": "GOOGLE_ASSISTANT_WELCOME"
+    }
+  ],
+  "userSays": [
+    {
+      "id": "b697ae1e-c06d-4ee5-b4b2-021ed63c199b",
+      "data": [
+        {
+          "text": "Hey Google, can I talk to GDL Library?"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0,
+      "updated": 1549968865,
+      "isAuto": false
+    },
+    {
+      "id": "c61ee8f4-3c94-4e0a-a8af-82f82f809eae",
+      "data": [
+        {
+          "text": "GDL Library"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0,
+      "updated": 1549968865,
+      "isAuto": false
+    }
+  ],
+  "followUpIntents": [],
+  "liveAgentHandoff": false,
+  "endInteraction": false,
+  "templates": []
+}
