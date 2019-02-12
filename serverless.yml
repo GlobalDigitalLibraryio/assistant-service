@@ -22,13 +22,10 @@ provider:
           aws:SourceVpce:
             - "${env:VPC_ENDPOINT, 'DEV'}"
 package:
+  individually: true
   exclude:
     - ./**
     - '!node_modules/**'
-  include:
-    - package.json
-    - functions/**/*.js
-    - functions/*.js
 
 functions:
   assistant:
@@ -41,8 +38,18 @@ functions:
       - http:
           method: GET
           path: /health
+    package:
+      include:
+        - package.json
+        - functions/**/*.js
+        - functions/*.js
+      exclude:
+        - '**__tests__/**'
 
 custom:
+  warmup:
+    enabled:
+      - prod
   vpc:
     vpcName: ${env:VPC, 'DEV'}
     subnetNames:
@@ -52,5 +59,6 @@ custom:
       - "serverless-security_group"
 
 plugins:
+  - serverless-plugin-warmup
   - serverless-vpc-discovery
   - serverless-offline #!OBS: serverless-offline needs to be last in the list
