@@ -3,7 +3,7 @@ service: assistant-service
 provider:
   name: aws
   runtime: nodejs8.10
-  stage: prod
+  stage: ${env:GDL_ENVIRONMENT, 'test'}
   region: eu-central-1
   endpointType: private
   role: arn:aws:iam::${env:GDL_ACCOUNT, 'DEV'}:role/${env:SERVERLESS_IAM_ROLE, 'DEV'}
