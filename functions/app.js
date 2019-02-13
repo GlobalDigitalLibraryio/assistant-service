@@ -45,4 +45,14 @@ server.get("/health", (req, res) => {
   res.status(200).json({ status: 'UP' });
 });
 
-module.exports.handler = serverless(server);
+const assistant = serverless(server);
+
+// https://github.com/FidelLimited/serverless-plugin-warmup
+module.exports.handler = function(event, context, callback) {
+  // check if we get a warm up event
+  if(event.source === 'serverless-plugin-warmup') {
+    console.log('Warm up!');
+    return callback(null, 'Warm up assistant-service');
+  }
+  return assistant(event, context, callback);
+};

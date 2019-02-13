@@ -14,6 +14,10 @@ Global Digital Library's Google assistant service
 - `cd assistant-service/`
 - `npm install`
 
+##### Plugins
+The application uses some serverless plugins which may affect the use of additional plugins (so you are aware). Current plugins used are:
+* [serverless-plugin-warmup](https://github.com/FidelLimited/serverless-plugin-warmup)
+
 ### Run locally
 
 To run the assistant locally on `localhost:3000`, use the command:
