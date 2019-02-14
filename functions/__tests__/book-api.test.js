@@ -33,6 +33,22 @@ describe("test search after books", () => {
   });
 });
 
+describe("test get books from reading level", () => {
+  it("should return books with only level one books", async () => {
+    expect.assertions(1);
+    const booksOnReadingLevelOne = await bookAPI.getBooksFromReadingLevel(
+      "one"
+    );
+
+    const booksWithOnlyLevelOne = booksOnReadingLevelOne.data.results.filter(
+      book => book.readingLevel == "1"
+    );
+    await expect(booksOnReadingLevelOne.data.results.length).toBe(
+      booksWithOnlyLevelOne.length
+    );
+  });
+});
+
 describe("test getBook", () => {
   it("should get basic book content and url´s to all chapters in book", async () => {
     expect.assertions(2);
@@ -59,7 +75,8 @@ describe("test getBook", () => {
 describe("test getChapter", () => {
   it("should get details from a chapter url", async () => {
     expect.assertions(1);
-    const firstChapterUrl = utils.findFirstReadablePageInBook(firstRandomBook).url;
+    const firstChapterUrl = utils.findFirstReadablePageInBook(firstRandomBook)
+      .url;
     const firstChapter = await bookAPI.getChapter(
       firstChapterUrl,
       firstRandomBook

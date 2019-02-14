@@ -74,11 +74,21 @@ describe("test getFormattedBookResults", () => {
 
 describe("test formatBookTitles", () => {
   it("should return a string with 16 in it (totalCount)", () => {
-    expect(utils.formatBookTitles("dog", 16, books)).toMatch("16");
+    expect(utils.formatBookTitles("dog", null, 16, books)).toMatch("16");
   });
 
   it("should return a string with 'cat' as topic", () => {
-    expect(utils.formatBookTitles("cat", 7, books)).toMatch("cat");
+    expect(utils.formatBookTitles("cat", "", 7, books)).toMatch("cat");
+  });
+
+  it("should return a string with 'one' as level", () => {
+    expect(utils.formatBookTitles("", "one", 7, books)).toMatch("one");
+  });
+
+  it("should return a string with 'read aloud' as level", () => {
+    expect(utils.formatBookTitles(null, "read aloud", 7, books)).toMatch(
+      "read aloud"
+    );
   });
 });
 
@@ -89,5 +99,27 @@ describe("test isEmpty(object)", () => {
 
   it("should return false for object containing values", () => {
     expect(utils.isEmpty({ test: "test" })).toBeFalsy();
+  });
+});
+
+describe("test transformReadingLevel(level)", () => {
+  it("should return 1 for level 'one'", () => {
+    expect(utils.transformReadingLevel("one")).toBe("1");
+  });
+
+  it("should return 4 for level 'four'", () => {
+    expect(utils.transformReadingLevel("four")).toBe("4");
+  });
+
+  it("should return 1 for level 'ONE'", () => {
+    expect(utils.transformReadingLevel("ONE")).toBe("1");
+  });
+
+  it("should return 1 for level 'One'", () => {
+    expect(utils.transformReadingLevel("One")).toBe("1");
+  });
+
+  it("should return 'read-aloud' for level 'read aloud'", () => {
+    expect(utils.transformReadingLevel("read aloud")).toBe("read-aloud");
   });
 });

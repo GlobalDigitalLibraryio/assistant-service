@@ -29,6 +29,15 @@ exports.search = function(query) {
   );
 };
 
+// Get books based on reading level 1-4, and "read-aloud"
+exports.getBooksFromReadingLevel = function(level) {
+  return axios(
+    `${bookApiUrl()}/books/en/?reading-level=${encodeURIComponent(
+      utils.transformReadingLevel(level)
+    )}&page-size=5&page=1`
+  );
+};
+
 // Get book and first chapter
 exports.getBook = function(bookId) {
   return axios(`${bookApiUrl()}/books/en/${bookId}`)
