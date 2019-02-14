@@ -95,7 +95,9 @@ exports.transformReadingLevel = function(level) {
       return "3";
     case "four":
       return "4";
-    default:
+    case "read aloud":
       return "read-aloud";
+    default:
+      return null;
   }
 };

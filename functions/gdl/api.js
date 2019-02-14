@@ -37,19 +37,22 @@ exports.listBooks = async conv => {
     } else {
       // Listing all the books on a given topic or level
       const { topic, level } = query.parameters;
+      const isTopic = topic && topic !== "";
+      const isLevel = level && level !== "";
+
       let bookResults;
-      if (topic && topic !== "") {
+      if (isTopic) {
         bookResults = await bookAPI.search(topic);
-      } else if (level && level !== "") {
+      } else if (isLevel) {
         bookResults = await bookAPI.getBooksFromReadingLevel(level);
       } else {
         conv.ask(
-          "I could not understang what you said. Can you please try again?"
+          "I could not understand what you said. Can you please try again?"
         );
         return;
       }
 
-      if (bookResults.data && bookResults.data.totalCount > 0) {
+      if (bookResults && bookResults.data && bookResults.data.totalCount > 0) {
         const formattedBookResults = utils.getFormattedBookResults(
           bookResults.data.results
         );
@@ -85,7 +88,11 @@ exports.listBooks = async conv => {
           );
         }
       } else {
-        conv.ask(`No books found for the topic ${topic} :(`);
+        conv.ask(
+          `No books found ${
+            isTopic ? `for the topic ${topic}` : `for level ${level}`
+          } :(`
+        );
       }
     }
   } else {

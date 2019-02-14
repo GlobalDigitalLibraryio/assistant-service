@@ -4,6 +4,7 @@ const utils = require("./utils");
 // Regex for removing HTML-tags
 const regexStripHTML = /(<(.|\n)*?>)|(\n{1,})|(s{3,})/gim;
 const regexReplaceConsecutiveSpaces = /\s\s+/g;
+const DEAFULT_LANG = "en";
 
 bookApiUrl = function() {
   const environment = process.env.GDL_ENVIRONMENT || "dev";
@@ -23,7 +24,7 @@ bookApiUrl = function() {
 // Search for any book on topic/query given by the user
 exports.search = function(query) {
   return axios(
-    `${bookApiUrl()}/search/en/?query=${encodeURIComponent(
+    `${bookApiUrl()}/search/${DEAFULT_LANG}/?query=${encodeURIComponent(
       query
     )}&page-size=5&page=1`
   );
@@ -31,16 +32,18 @@ exports.search = function(query) {
 
 // Get books based on reading level 1-4, and "read-aloud"
 exports.getBooksFromReadingLevel = function(level) {
+  const readingLevel = utils.transformReadingLevel(level);
+  if (!readingLevel) return null;
   return axios(
-    `${bookApiUrl()}/books/en/?reading-level=${encodeURIComponent(
-      utils.transformReadingLevel(level)
+    `${bookApiUrl()}/books/${DEAFULT_LANG}/?reading-level=${encodeURIComponent(
+      readingLevel
     )}&page-size=5&page=1`
   );
 };
 
 // Get book and first chapter
 exports.getBook = function(bookId) {
-  return axios(`${bookApiUrl()}/books/en/${bookId}`)
+  return axios(`${bookApiUrl()}/books/${DEAFULT_LANG}/${bookId}`)
     .then(response => {
       if (!utils.isEmpty(response.data)) {
         return this.getChapter(
