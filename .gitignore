@@ -17,3 +17,8 @@ venv**
 /.idea
 /.history
 /.serverless
+
+# Build of the minified app
+/dist
+
+/lib

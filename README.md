@@ -1,5 +1,7 @@
 # assistant-service
 
+[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-green.svg)](https://www.gnu.org/licenses/gpl-3.0)
+
 Global Digital Library's Google assistant service
 
 ## Installation
@@ -15,8 +17,10 @@ Global Digital Library's Google assistant service
 - `npm install`
 
 ##### Plugins
+
 The application uses some serverless plugins which may affect the use of additional plugins (so you are aware). Current plugins used are:
-* [serverless-plugin-warmup](https://github.com/FidelLimited/serverless-plugin-warmup)
+
+- [serverless-plugin-warmup](https://github.com/FidelLimited/serverless-plugin-warmup)
 
 ### Run locally
 
@@ -33,8 +37,8 @@ Test are run by using the command:
 To be able to test the API on an assistant like Google Home, Google home mini or an assistant on your phone you first need to create a project on [Google actions](https://developers.google.com/actions/).
 Then you can integrate with [Dialogflow](https://console.dialogflow.com/) where you set up the following:
 
-   * A `fulfilment` (webhook url) which must be a `https`-address (you can use [ngrok](https://ngrok.com/))
-   * A list of `intents` (should correlate with the ones defined in `app.js`)
-   * A set of `entities` (we use `read` and `topic`)
+- A `fulfilment` (webhook url) which must be a `https`-address (you can use [ngrok](https://ngrok.com/))
+- A list of `intents` (should correlate with the ones defined in `app.js`)
+- A set of `entities` (we use `read` and `topic`)
 
 In the folder `config/intents` and `config/entities` lies the configuration setup for `intents` and `entities` in the project which can be uploaded on [Dialogflow](https://console.dialogflow.com/).

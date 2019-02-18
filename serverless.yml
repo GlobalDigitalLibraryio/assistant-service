@@ -25,11 +25,11 @@ package:
   individually: true
   exclude:
     - ./**
-    - '!node_modules/**'
+    - "!node_modules/**"
 
 functions:
   assistant:
-    handler: functions/app.handler
+    handler: dist/index.handler
     description: "Google assistant API for reading books"
     events:
       - http:
@@ -44,7 +44,7 @@ functions:
         - functions/**/*.js
         - functions/*.js
       exclude:
-        - '**__tests__/**'
+        - "**__tests__/**"
 
 custom:
   warmup:
