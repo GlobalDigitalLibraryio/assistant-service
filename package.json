@@ -30,7 +30,7 @@
     "serverless-plugin-warmup": "^4.3.2-rc.1"
   },
   "scripts": {
-    "dev": "yarn run build && serverless offline start",
+    "dev": "npm run build && serverless offline start",
     "test": "jest",
     "build": "ncc build functions/app.js -o dist"
   },
