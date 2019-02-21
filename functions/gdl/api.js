@@ -37,13 +37,11 @@ exports.listBooks = async conv => {
     } else {
       // Listing all the books on a given topic or level
       const { topic, level } = query.parameters;
-      const isTopic = topic && topic !== "";
-      const isLevel = level && level !== "";
 
       let bookResults;
-      if (isTopic) {
+      if (!!topic) {
         bookResults = await bookAPI.search(topic);
-      } else if (isLevel) {
+      } else if (!!level) {
         bookResults = await bookAPI.getBooksFromReadingLevel(level);
       } else {
         conv.ask(
