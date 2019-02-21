@@ -28,8 +28,12 @@ exports.getFormattedBookResults = function(booksJson) {
  * Function for formatting the text read on 'listing books'
  * ssml language: https://developers.google.com/actions/reference/ssml
  */
-exports.formatBookTitles = function(topic, totalCount, books) {
-  let bookTitles = `<speak><p><s>Found ${totalCount} book with the topic ${topic}.</s><break time="1s"/>
+exports.formatBookTitles = function(topic, level, totalCount, books) {
+  const topicOrLevel =
+    topic && topic !== "" ? `with the topic ${topic}` : `on level ${level}`;
+  let bookTitles = `<speak><p><s>Found ${totalCount} ${
+    totalCount > 1 ? "books" : "book"
+  } ${topicOrLevel}.</s><break time="1s"/>
   ${
     totalCount > 1
       ? `<s>Here are the first ${totalCount < 6 ? totalCount : "five"}:</s>`
@@ -39,7 +43,9 @@ exports.formatBookTitles = function(topic, totalCount, books) {
   books
     .sort((a, b) => a.id - b.id)
     .forEach(book => {
-      bookTitles += `<s>${book.title}<break time="1s"/></s>
+      bookTitles += `<s>${
+        book.title.endsWith(".") ? book.title : `${book.title}.`
+      }<break time="1s"/></s>
       `;
     });
 
@@ -77,4 +83,21 @@ exports.storeBook = function(book) {
 exports.isEmpty = function(object) {
   // returns true if empty and false if its non-empty
   return !object || Object.keys(object).length === 0;
+};
+
+exports.transformReadingLevel = function(level) {
+  switch (level.toLowerCase()) {
+    case "one":
+      return "1";
+    case "two":
+      return "2";
+    case "three":
+      return "3";
+    case "four":
+      return "4";
+    case "read aloud":
+      return "read-aloud";
+    default:
+      return null;
+  }
 };

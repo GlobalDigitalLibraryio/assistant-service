@@ -1,0 +1,39 @@
+{
+  "id": "2464a11f-103e-4632-be2a-8f528115a754",
+  "name": "level",
+  "isOverridable": true,
+  "entries": [
+    {
+      "value": "one",
+      "synonyms": [
+        "one"
+      ]
+    },
+    {
+      "value": "two",
+      "synonyms": [
+        "two"
+      ]
+    },
+    {
+      "value": "three",
+      "synonyms": [
+        "three"
+      ]
+    },
+    {
+      "value": "four",
+      "synonyms": [
+        "four"
+      ]
+    },
+    {
+      "value": "read aloud",
+      "synonyms": [
+        "read aloud"
+      ]
+    }
+  ],
+  "isEnum": false,
+  "automatedExpansion": true
+}

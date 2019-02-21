@@ -19,7 +19,7 @@ exports.listBooks = async conv => {
     if (query.queryText === "actions_intent_OPTION") {
       const input = conv.arguments.parsed.input;
       if (!input) {
-        conv.ask('Sorry, we did not get that. Could you please try again?');
+        conv.ask("Sorry, we did not get that. Could you please try again?");
         return;
       }
       const book = await bookAPI.getBook(input.OPTION);
@@ -35,11 +35,22 @@ exports.listBooks = async conv => {
       );
       conv.ask(new Suggestions("next page"));
     } else {
-      // Listing all the books on a given topic
-      const topic = query.parameters.topic;
-      const bookResults = await bookAPI.search(topic);
+      // Listing all the books on a given topic or level
+      const { topic, level } = query.parameters;
 
-      if (bookResults.data && bookResults.data.totalCount > 0) {
+      let bookResults;
+      if (!!topic) {
+        bookResults = await bookAPI.search(topic);
+      } else if (!!level) {
+        bookResults = await bookAPI.getBooksFromReadingLevel(level);
+      } else {
+        conv.ask(
+          "I could not understand what you said. Can you please try again?"
+        );
+        return;
+      }
+
+      if (bookResults && bookResults.data && bookResults.data.totalCount > 0) {
         const formattedBookResults = utils.getFormattedBookResults(
           bookResults.data.results
         );
@@ -47,6 +58,7 @@ exports.listBooks = async conv => {
         conv.ask(
           utils.formatBookTitles(
             topic,
+            level,
             bookResults.data.totalCount,
             bookResults.data.results
           )
@@ -74,7 +86,11 @@ exports.listBooks = async conv => {
           );
         }
       } else {
-        conv.ask(`No books found for the topic ${topic} :(`);
+        conv.ask(
+          `No books found ${
+            isTopic ? `for the topic ${topic}` : `for level ${level}`
+          } :(`
+        );
       }
     }
   } else {

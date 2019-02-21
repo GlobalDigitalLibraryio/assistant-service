@@ -1,5 +1,5 @@
 {
-  "id": "4f9a3b72-28b5-44c2-a742-2369e16a2e2c",
+  "id": "7ee1c22d-6c04-47b3-bee5-c2185682d06a",
   "name": "list_books",
   "auto": true,
   "contexts": [],
@@ -16,12 +16,23 @@
           "name": "topic",
           "value": "$topic",
           "isList": false
+        },
+        {
+          "id": "21a07942-f606-49ac-8bec-1c052b51eb43",
+          "required": false,
+          "dataType": "@level",
+          "name": "level",
+          "value": "$level",
+          "isList": false
         }
       ],
       "messages": [
         {
           "type": 0,
-          "speech": "Results with topic $topic"
+          "speech": [
+            "Results with topic $topic",
+            "Results with books on level $level"
+          ]
         }
       ],
       "defaultResponsePlatforms": {
@@ -37,7 +48,7 @@
   },
   "webhookUsed": true,
   "webhookForSlotFilling": false,
-  "lastUpdate": 1548943730,
+  "lastUpdate": 1550143153,
   "fallbackIntent": false,
   "events": [
     {
@@ -45,6 +56,150 @@
     }
   ],
   "userSays": [
+    {
+      "id": "84f70e1a-8274-4e71-b690-435470de1366",
+      "data": [
+        {
+          "text": "list all books with level "
+        },
+        {
+          "text": "three",
+          "alias": "level",
+          "meta": "@level",
+          "userDefined": false
+        }
+      ],
+      "isTemplate": false,
+      "count": 0,
+      "updated": 1550143153,
+      "isAuto": false
+    },
+    {
+      "id": "b3aa3576-cce1-4e49-8453-8a513f80af2f",
+      "data": [
+        {
+          "text": "list all book on level "
+        },
+        {
+          "text": "one",
+          "alias": "level",
+          "meta": "@level",
+          "userDefined": false
+        }
+      ],
+      "isTemplate": false,
+      "count": 0,
+      "updated": 1550143153,
+      "isAuto": false
+    },
+    {
+      "id": "02a746c2-fa6f-4769-bcca-0cf4f937d8d1",
+      "data": [
+        {
+          "text": "read aloud",
+          "alias": "level",
+          "meta": "@level",
+          "userDefined": false
+        }
+      ],
+      "isTemplate": false,
+      "count": 0,
+      "updated": 1550143153,
+      "isAuto": false
+    },
+    {
+      "id": "5cc86a5a-eef4-4aac-81a1-e1cc288a2ee3",
+      "data": [
+        {
+          "text": "level "
+        },
+        {
+          "text": "four",
+          "alias": "level",
+          "meta": "@level",
+          "userDefined": false
+        }
+      ],
+      "isTemplate": false,
+      "count": 0,
+      "updated": 1550143153,
+      "isAuto": false
+    },
+    {
+      "id": "c04f048c-16dc-4213-a5ac-c7b591ae9e9d",
+      "data": [
+        {
+          "text": "level "
+        },
+        {
+          "text": "three",
+          "alias": "level",
+          "meta": "@level",
+          "userDefined": false
+        }
+      ],
+      "isTemplate": false,
+      "count": 0,
+      "updated": 1550143153,
+      "isAuto": false
+    },
+    {
+      "id": "741bce3f-b891-4b5f-81ad-2a79317c417b",
+      "data": [
+        {
+          "text": "level "
+        },
+        {
+          "text": "two",
+          "alias": "level",
+          "meta": "@level",
+          "userDefined": false
+        }
+      ],
+      "isTemplate": false,
+      "count": 0,
+      "updated": 1550143153,
+      "isAuto": false
+    },
+    {
+      "id": "68a5e739-b7fe-4c13-8ecc-5b9ec5f09e6e",
+      "data": [
+        {
+          "text": "level "
+        },
+        {
+          "text": "one",
+          "alias": "level",
+          "meta": "@level",
+          "userDefined": false
+        }
+      ],
+      "isTemplate": false,
+      "count": 0,
+      "updated": 1550143153,
+      "isAuto": false
+    },
+    {
+      "id": "09b85ebf-189f-4e49-8f02-762a2b3b99d1",
+      "data": [
+        {
+          "text": "list level "
+        },
+        {
+          "text": "two",
+          "alias": "level",
+          "meta": "@level",
+          "userDefined": false
+        },
+        {
+          "text": " books"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0,
+      "updated": 1550143153,
+      "isAuto": false
+    },
     {
       "id": "87c41102-a629-44bc-98e7-61f32d154117",
       "data": [
