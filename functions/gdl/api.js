@@ -88,7 +88,7 @@ exports.listBooks = async conv => {
       } else {
         conv.ask(
           `No books found ${
-            isTopic ? `for the topic ${topic}` : `for level ${level}`
+            !!topic ? `for the topic ${topic}` : `for level ${level}`
           } :(`
         );
       }

@@ -57,7 +57,7 @@ exports.formatBookTitles = function(topic, level, totalCount, books) {
 exports.findFirstReadablePageInBook = function(book) {
   // comment in code below if we dont want cover page to be the first page
 
-  /*const firstReadablePage = book.chapters
+  const firstReadablePage = book.chapters
     .sort((a, b) => a.seqNo - b.seqNo) // assure chapters to be sorted
     .find(chapter => {
       // If chapter is typed properly the first page after book cover will be type="Content"
@@ -65,10 +65,10 @@ exports.findFirstReadablePageInBook = function(book) {
     });
   return (
     firstReadablePage || book.chapters.sort((a, b) => a.seqNo - b.seqNo)[1]
-  );*/
-  return book.chapters
-    ? book.chapters.sort((a, b) => a.seqNo - b.seqNo)[0]
-    : null;
+  );
+  // return book.chapters
+  //   ? book.chapters.sort((a, b) => a.seqNo - b.seqNo)[0]
+  //   : null;
 };
 
 exports.storeBook = function(book) {
@@ -86,6 +86,17 @@ exports.isEmpty = function(object) {
 };
 
 exports.transformReadingLevel = function(level) {
+  /**
+   * Some times the input from the user is being translated to number,
+   * and sometimes its the word for the number. So we supports both.
+   */
+  if (
+    Number.isInteger(Number(level)) &&
+    Number(level) >= 1 &&
+    Number(level) <= 5
+  )
+    return level;
+
   switch (level.toLowerCase()) {
     case "one":
       return "1";

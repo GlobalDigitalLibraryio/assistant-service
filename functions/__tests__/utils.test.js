@@ -4,11 +4,14 @@ const books = require("./books.json");
 
 describe("test findFirstReadablePageInBook", () => {
   it("should sort chapters and return the first", () => {
+    // OBS: This test is related to what logic 'findFirstReadablePageInBook' has. Until we have decided whats the best...
+    // If it returns the cover page the values should be: id: 153, seqNo: 2, url:....../chapters/153
+    //  if it returns the first readable page it should be: id: 154, seqNo: 2, url: ..../chapters/154
     expect(utils.findFirstReadablePageInBook(books[0])).toEqual({
-      id: 153,
-      seqNo: 1,
+      id: 154,
+      seqNo: 2,
       url:
-        "https://api.test.digitallibrary.io/book-api/v1/books/en/11/chapters/153"
+        "https://api.test.digitallibrary.io/book-api/v1/books/en/11/chapters/154"
     });
   });
 });
@@ -107,8 +110,8 @@ describe("test transformReadingLevel(level)", () => {
     expect(utils.transformReadingLevel("one")).toBe("1");
   });
 
-  it("should return 4 for level 'four'", () => {
-    expect(utils.transformReadingLevel("four")).toBe("4");
+  it("should return 4 for level '4'", () => {
+    expect(utils.transformReadingLevel("4")).toBe("4");
   });
 
   it("should return 1 for level 'ONE'", () => {
