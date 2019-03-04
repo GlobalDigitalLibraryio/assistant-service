@@ -11,7 +11,7 @@
       "messages": [
         {
           "type": 0,
-          "speech": "Welcome to the GDL. I can help you search for books and I can read them for you. To search for a book just name the topic of the book, for example, “dog” or “list books about dogs”. If you want me to read for you, simply use the word “read”. For example “read a book about dogs” or ”please read the book Come Back, Cat!”"
+          "speech": "Welcome to the GDL, it's a pleasure meeting you. I can help you search for books, and I can read them for you. To search for a book just name the topic of the book, for example, “dog” or “list books about dogs”. If you want me to read for you, simply use the word “read”. For example “read a book about dogs” or ”please read the book Come Back, Cat!”"
         }
       ],
       "defaultResponsePlatforms": {},
@@ -25,7 +25,7 @@
   },
   "webhookUsed": true,
   "webhookForSlotFilling": false,
-  "lastUpdate": 1550039380,
+  "lastUpdate": 1551704172,
   "fallbackIntent": false,
   "events": [
     {

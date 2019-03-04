@@ -1,5 +1,5 @@
 {
-  "id": "aef0bab7-76d7-4c09-bd14-b9e243a0edc5",
+  "id": "f65719c0-2c7c-45a1-b2c5-7ab00b4ceb40",
   "name": "quit_app",
   "auto": true,
   "contexts": [],
@@ -11,7 +11,7 @@
       "messages": [
         {
           "type": 0,
-          "speech": []
+          "speech": "Good bye, it was a pleasure talking to you. Come back soon!"
         }
       ],
       "defaultResponsePlatforms": {},
@@ -25,7 +25,7 @@
   },
   "webhookUsed": true,
   "webhookForSlotFilling": false,
-  "lastUpdate": 1548793502,
+  "lastUpdate": 1551704208,
   "fallbackIntent": false,
   "events": [],
   "userSays": [

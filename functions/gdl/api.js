@@ -9,7 +9,7 @@ exports.start = conv => {
 
 exports.quit = conv => {
   conv.user.storage = {};
-  conv.close("Thank you, and good bye!");
+  conv.close(conv.body.queryResult.fulfillmentText);
 };
 
 exports.listBooks = async conv => {
