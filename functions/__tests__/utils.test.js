@@ -126,3 +126,16 @@ describe("test transformReadingLevel(level)", () => {
     expect(utils.transformReadingLevel("read aloud")).toBe("read-aloud");
   });
 });
+
+describe("test addReadingPauseAfterText(text, timeInSeconds)", () => {
+  it('should return a <speak /> with <break time="1s"/>', () => {
+    expect(utils.addReadingPauseAfterText("test", 1)).toBe(
+      '<speak><p><s>test<break time="1s"/></s></p></speak>'
+    );
+  });
+  it('should return a <speak /> with <break time="5s"/>', () => {
+    expect(utils.addReadingPauseAfterText("test", 5)).toBe(
+      '<speak><p><s>test<break time="5s"/></s></p></speak>'
+    );
+  });
+});
