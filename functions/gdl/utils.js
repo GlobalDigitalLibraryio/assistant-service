@@ -112,3 +112,7 @@ exports.transformReadingLevel = function(level) {
       return null;
   }
 };
+
+exports.addReadingPauseAfterText = function(text, timeInSeconds) {
+  return `<speak><p><s>${text}<break time="${timeInSeconds}s"/></s></p></speak>`;
+};

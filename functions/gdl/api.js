@@ -110,7 +110,15 @@ exports.readBook = async conv => {
       conv.user.storage = utils.storeBook(book);
 
       // Reads text and display picture in chapters. If its only a picture on the page we just display that.
-      conv.ask(book.text || book.title);
+      conv.ask(
+        utils.addReadingPauseAfterText(
+          `Starting to read the book ${book.title}`,
+          1
+        )
+      );
+      if (book.text) {
+        conv.ask(book.text);
+      }
       conv.ask(
         new Image({
           url: book.image,
