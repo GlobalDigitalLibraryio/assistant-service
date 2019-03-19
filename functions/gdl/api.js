@@ -89,7 +89,7 @@ exports.listBooks = async conv => {
         conv.ask(
           `No books found ${
             !!topic ? `for the topic ${topic}` : `for level ${level}`
-          } :(`
+          }. What else would you like to read about?`
         );
       }
     }
@@ -127,7 +127,9 @@ exports.readBook = async conv => {
       );
       conv.ask(new Suggestions("next page"));
     } else {
-      conv.ask(`No books found on the topic ${topic}`);
+      conv.ask(
+        `No books found on the topic ${topic}. What else would you like to read about?`
+      );
     }
   }
 };
