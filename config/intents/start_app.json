@@ -11,7 +11,7 @@
       "messages": [
         {
           "type": 0,
-          "speech": "Welcome to the GDL, it's a pleasure meeting you. I can help you search for books, and I can read them for you. To search for a book just name the topic of the book, for example, “dog” or “list books about dogs”. If you want me to read for you, simply use the word “read”. For example “read a book about dogs” or ”please read the book Come Back, Cat!”"
+          "speech": "Welcome to the GDL, it’s a pleasure meeting you. I can help you search for books, and I can read them for you. To search for a book just name the topic of the book, for example, “list books about dogs”. To list books by level,  simply use the word “level” and a number from 1 to 4. For example “list books on level one”. If you want me to read for you, simply use the word “read”. For example “read a book about dogs” or “please read the book Come Back, Cat!”"
         }
       ],
       "defaultResponsePlatforms": {},
