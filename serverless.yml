@@ -7,8 +7,10 @@ provider:
   region: eu-central-1
   endpointType: private
   role: arn:aws:iam::${env:GDL_ACCOUNT, 'DEV'}:role/${env:SERVERLESS_IAM_ROLE, 'DEV'}
+  environment:
+    GDL_ENVIRONMENT: ${env:GDL_ENVIRONMENT, 'dev'} #Our server didn't get process.env.GDL_ENVIRONMENT without doing this..
   tags:
-    VERSION: "0.1"
+    VERSION: "1.0.0"
   deploymentBucket:
     name: ${env:GDL_SERVERLESS_DEPLOYMENT_BUCKET, 'DEV'}
   resourcePolicy:
