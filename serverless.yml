@@ -10,12 +10,12 @@ provider:
   environment:
     GDL_ENVIRONMENT: ${env:GDL_ENVIRONMENT, 'dev'} #Our server didn't get process.env.GDL_ENVIRONMENT without doing this..
   tags:
-    VERSION: "1.0.0"
+    VERSION: "1.0.1"
   deploymentBucket:
     name: ${env:GDL_SERVERLESS_DEPLOYMENT_BUCKET, 'DEV'}
   resourcePolicy:
     - Effect: Allow
-      Principal: "*"
+      Principal: '*'
       Action: execute-api:Invoke
       Resource:
         - execute-api:/*/*/*
@@ -32,7 +32,7 @@ package:
 functions:
   assistant:
     handler: functions/app.handler
-    description: "Google assistant API for reading books"
+    description: 'Google assistant API for reading books'
     events:
       - http:
           method: POST
@@ -58,7 +58,27 @@ custom:
       - "${env:GDL_ENVIRONMENT, 'DEV'}.private_a.gdl"
       - "${env:GDL_ENVIRONMENT, 'DEV'}.private_b.gdl"
     securityGroupNames:
-      - "serverless-security_group"
+      - 'serverless-security_group'
+  alerts:
+    stages:
+      - prod
+    topics:
+      alarm: ${env:GDL_SURVEILLANCE_SNS_ARN, 'DEV'}
+    alarms:
+      - functionThrottles
+      - functionErrors
+      - functionInvocations
+      - functionDuration
+    definitions:
+      functionDuration:
+        namespace: 'AWS/Lambda'
+        metric: Duration
+        threshold: 500
+        statistic: Average
+        period: 60
+        evaluationPeriods: 2
+        comparisonOperator: GreaterThanOrEqualToThreshold
+        treatMissingData: missing
 
 plugins:
   - serverless-plugin-warmup
