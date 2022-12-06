@@ -18,8 +18,8 @@
   "dependencies": {
     "actions-on-google": "^2.5.0",
     "axios": "^0.18.0",
-    "body-parser": "^1.18.3",
-    "express": "^4.16.4",
+    "body-parser": "^1.20.1",
+    "express": "^4.18.2",
     "serverless": "^1.37.0",
     "serverless-http": "^1.9.0",
     "serverless-vpc-discovery": "^1.0.13"
